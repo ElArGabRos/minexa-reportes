@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-        <h2>Listado de Alcadias</h2>
+        <h2 class="titulo">Listado de Alcadias</h2>
         
     </div> 
 <div class ="contenedor">
@@ -28,7 +28,7 @@
         <tr>
             <td>{{ $alcaldia -> id }}</td>
             <td>{{ $alcaldia -> codigo }}</td>
-            <td>{{ $alcaldia -> alcaldia }}</td>
+            <td class="izq">{{ $alcaldia -> alcaldia }}</td>
             <td>{{ $alcaldia -> estado }}</td>
         </tr>
     @endforeach

@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-        <h2>Listado de Proveedores</h2>
+        <h2 class="titulo">Listado de Proveedores</h2>
         
     </div> 
 <div class ="contenedor">
@@ -17,7 +17,7 @@
 <table>
     <thead>
     <tr>
-       <th style="color: red">id</th>
+       <th>id</th>
        <th>Proveedor</th>
        <th>Responsable</th>
        <th>Datos</th>
@@ -27,8 +27,8 @@
     @foreach($proveedores as $proveedor)
         <tr>
             <td>{{ $proveedor -> id }}</td>
-            <td>{{ $proveedor -> proveedor }}</td>
-            <td>{{ $proveedor -> responsable }}</td>
+            <td class="izq">{{ $proveedor -> proveedor }}</td>
+            <td class="izq">{{ $proveedor -> responsable }}</td>
             <td>{{ $proveedor -> direccion }} <br>
                 {{ $proveedor -> telefono }} <br>
                 {{ $proveedor -> email }}

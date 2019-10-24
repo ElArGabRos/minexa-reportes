@@ -9,9 +9,9 @@
 </head>
 <body>
 <div>
-        <h2>Listado de Descuentos</h2>
+        <h2 class="titulo">Listado de Descuentos</h2>
         
-    </div> 
+</div> 
 <div class ="contenedor">
     
 <table>
@@ -25,18 +25,18 @@
        <th>Estado</th>
     </tr>
     </thead>
-    <tbody>
-    @foreach($descuentos as $descuento)
-        <tr>
-            <td>{{ $descuento -> id }}</td>
-            <td>{{ $descuento -> descuento }}</td>
-            <td>{{ $descuento -> porcentaje }}</td>
-            <td>{{ $descuento -> descuento_fijo }}</td>
-            <td>{{ $descuento -> voluntario }}</td>
-            <td>{{ $descuento -> estado }}</td>
-        </tr>
-    @endforeach
-    </tbody>
+        <tbody>
+        @foreach($descuentos as $descuento)
+            <tr>
+                <td>{{ $descuento -> id }}</td>
+                <td class="izq">{{ $descuento -> descuento }}</td>
+                <td>{{ $descuento -> porcentaje }}</td>
+                <td>{{ $descuento -> descuento_fijo }}</td>
+                <td>{{ $descuento -> voluntario }}</td>
+                <td>{{ $descuento -> estado }}</td>
+            </tr>
+        @endforeach
+        </tbody>
 </table>
 </div>    
     

@@ -15,12 +15,12 @@ class ProveedoresController extends Controller
     public function index()
     {
         //
-        //$proveedores = Proveedores::all();
-        $proveedores = Proveedores::orderBy('id','asc')
-        ->get();
-        //return view('proveedor', ['proveedores'=>$proveedores]);
-        //$pdf = PDF::loadView('proveedores',compact('proveedores'));
-        //return $pdf->stream('proveedores.pdf');
+        $proveedores = Proveedores::all();
+        //$proveedores = Proveedores::orderBy('id','asc')
+        //->get();
+        //return view('proveedores', ['proveedores'=>$proveedores]);
+        $pdf = PDF::loadView('proveedores',compact('proveedores'));
+        return $pdf->stream('proveedores.pdf');
 
         return Excel::download(new ProveedoresExport, 'proveedoress.xlsx');
     }

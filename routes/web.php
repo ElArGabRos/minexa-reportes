@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::Resource('alcaldia','AlcaldiaController');
 Route::Resource('descuento','DescuentosController');
+Route::Resource('proveedor','ProveedoresController');

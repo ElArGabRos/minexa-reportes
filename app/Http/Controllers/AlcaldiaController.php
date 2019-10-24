@@ -21,7 +21,7 @@ class AlcaldiaController extends Controller
         //$alcaldias = alcaldia::all();
         $alcaldias = alcaldia::orderBy('codigo','asc')
         ->get();
-        return view('alcaldia', ['alcaldias'=>$alcaldias]);
+        //return view('alcaldia', ['alcaldias'=>$alcaldias]);
         $pdf = PDF::loadView('alcaldia',compact('alcaldias'));
         return $pdf->stream('alcaldias.pdf');
 
